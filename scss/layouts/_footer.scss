@@ -1,0 +1,136 @@
+.footer-wrapper {
+	background: $primCol;
+
+	.footer {
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		.logo {
+			max-width: 100%;
+			max-height: 70px;
+		}
+
+		.contact-wrapper {
+			margin-top: 16px;
+
+			.icon-text {
+				@include flex(row, null, baseline);
+				margin: 16px 0;
+
+				.icon {
+					@include flex(row, center, center);
+					width: 30px;
+					height: 30px;
+					border: 1px solid #fff;
+					color: #fff;
+					font-size: 14px;
+					flex-shrink: 0;
+				}
+
+				.text {
+					color: #fff;
+					margin-left: 16px;
+				}
+			}
+		}
+
+		.social-wrapper {
+			@include flex(row, null, center);
+			margin-left: -10px;
+
+			.social-link {
+				@include flex(row, center, center);
+				width: 45px;
+				height: 45px;
+				border: 1px solid #fff;
+				margin: 0 10px;
+				color: $primCol;
+				background: #fff;
+				font-size: 18px;
+				transition: 0.3s all;
+
+				&:hover {
+					background: transparent;
+					color: #fff;
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		.footer-title {
+			.text {
+				color: #fff;
+			}
+
+			.line-with-icon {
+				@include flex(row, null, center);
+				color: #fff;
+				margin-top: -5px;
+
+				&::before {
+					content: "";
+					width: 100%;
+					height: 2px;
+					display: block;
+					background: #fff;
+				}
+			}
+		}
+
+		.mapWrapper {
+			height: 100%;
+			margin-top: 10px;
+			border: 1px solid $lpCol;
+
+			iframe {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.useful-links {
+			.link {
+				@include flex(row, null, center);
+				color: #fff;
+				margin: 5px 0;
+
+				i {
+					margin-right: 10px;
+				}
+
+				&:hover {
+					span {
+						text-decoration: underline
+					}
+				}
+			}
+		}
+
+	}
+
+	.copyright {
+		background: $lpCol;
+
+		.copy-wrapper {
+			@include flex(row, $sb, center);
+			padding: 8px 0;
+			color: $primCol;
+
+			.ucas {
+				@include flex(row, null, center);
+
+				span {
+					margin-right: 10px;
+				}
+
+				a {
+					img {
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@import "footerResponsive";

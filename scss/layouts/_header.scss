@@ -1,0 +1,143 @@
+/* -------------------------------------------- */
+/*                 social phone                 */
+/* -------------------------------------------- */
+.social-contact {
+    @include flex(row, $sb, center);
+    padding: 6px 0;
+    background: #fff;
+
+    .social {
+        @include flex(row);
+
+        .icon {
+            @include flex(row, center, center);
+            width: 30px;
+            height: 30px;
+            background: $primCol;
+            margin: 0 12px;
+            color: #fff;
+            transition: 0.3s all;
+
+            &:hover {
+                background: $lpCol;
+                color: $primCol;
+                box-shadow: inset 0px 0px 0px 1px $primCol;
+            }
+        }
+    }
+
+    .contact {
+        @include flex(row);
+
+        .icon-text {
+            @include flex(row, null, center);
+            margin: 0 12px;
+
+            .icon {
+                @include flex(row, center, center);
+                width: 30px;
+                height: 30px;
+                background: $primCol;
+                margin: 0 12px;
+                color: #fff;
+            }
+        }
+
+    }
+}
+
+/* -------------------------------------------- */
+/*              header                           */
+/* -------------------------------------------- */
+
+.dropdown-menu {
+    margin-top: 0;
+
+    &.left {
+        left: unset !important;
+        right: 0 !important;
+    }
+}
+
+.dropdown-menu .dropdown .dropdown-menu {
+    left: 100%;
+    top: 0%;
+    margin: 0 20px;
+    border-width: 0;
+}
+
+.dropdown-menu .dropdown .dropdown-menu.left {
+    right: 100%;
+    left: auto;
+}
+
+.navigation-menu {
+    .navbar {
+        background: $primCol;
+        padding: unset;
+
+        .navbar-brand {
+            padding: unset;
+
+            .logo {
+                max-width: 100%;
+                max-height: 40px;
+            }
+        }
+
+        .navbar-nav {
+            &>.nav-item {
+                padding: 8px 16px;
+                position: relative;
+
+                &:hover {
+                    background: $lpCol;
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        display: block;
+                        height: 2px;
+                        background: lighten($primCol, 25%);
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    .nav-link {
+                        color: $primCol;
+                    }
+                }
+
+                .nav-link {
+                    color: #fff;
+
+                    &:hover {
+                        color: $primCol;
+                    }
+                }
+
+                .dropdown-menu {
+                    margin-top: 10px;
+                    background: $lpCol;
+                    border: 1px solid rgba($color: $primCol, $alpha: .25);
+                    left: 0;
+                    border-radius: 0;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 30px;
+                        top: -30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@import "headerResponsive";

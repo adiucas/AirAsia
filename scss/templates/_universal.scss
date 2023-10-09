@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primcol: $primCol;
+	--seccol: $secCol;
+	--headff: $headFF;
+	--paraff: $paraFF;
+	--fw: $fw;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	@include para;
+	position: relative;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: unset;
+}
+
+a,
+p,
+span,
+button {
+	@include para;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include head("700");
+	margin: 0;
+}
+
+hr,
+p {
+	margin: 0;
+}

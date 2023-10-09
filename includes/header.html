@@ -1,0 +1,162 @@
+<section class="navigation-menu sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light" id="main_navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://tasgroupbd.com/wp-content/uploads/2022/10/Asset-2-2.png" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu animate__animated animate__fadeIn">
+                            <!-- <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    Why Choose Us
+                                </a>
+                                <ul class="dropdown-menu animate__animated animate__fadeIn">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown">
+                                            Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu animate__animated animate__fadeIn">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li><a class="dropdown-item" href="#">Why Choose Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu left animate__animated animate__fadeIn">
+                            <!-- <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu left animate__animated animate__fadeIn">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown">
+                                            Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu animate__animated animate__fadeIn">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li><a class="dropdown-item" href="#">Service 1</a></li>
+                            <li><a class="dropdown-item" href="#">Service 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Service 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+<script>
+    function bootnavbar(options) {
+        const defaultOption = {
+            selector: "main_navbar",
+            animation: true,
+            animateIn: "animate__fadeIn"
+        };
+
+        const bnOptions = { ...defaultOption, ...options };
+
+        init = function () {
+            var dropdowns = document
+                .getElementById(bnOptions.selector)
+                .getElementsByClassName("dropdown");
+
+            Array.prototype.forEach.call(dropdowns, (item) => {
+                //add animation
+                if (bnOptions.animation) {
+                    const element = item.querySelector(".dropdown-menu");
+                    element.classList.add("animate__animated");
+                    element.classList.add(bnOptions.animateIn);
+                }
+
+                //hover effects
+                item.addEventListener("mouseover", function () {
+                    this.classList.add("show");
+                    const element = this.querySelector(".dropdown-menu");
+                    element.classList.add("show");
+                });
+
+                item.addEventListener("mouseout", function () {
+                    this.classList.remove("show");
+                    const element = this.querySelector(".dropdown-menu");
+                    element.classList.remove("show");
+                });
+            });
+        };
+
+        init();
+    }
+
+    new bootnavbar();
+</script>

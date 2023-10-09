@@ -1,0 +1,121 @@
+@import 'templates/variables';
+@import 'templates/mixins';
+
+/***** our services *****/
+
+.our-services {
+    .body {
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            display: block;
+
+            img {
+                width: 100%;
+                transition: 0.3s all;
+            }
+
+            .overlay {
+                @include flex(col, center, center);
+                position: absolute;
+                background: rgba($color: #000000, $alpha: .25);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                color: #fff;
+                transition: 0.3s all;
+
+                .icon {
+                    font-size: 48px;
+                    transition: 0.3s all;
+                }
+
+                .text {
+                    @include head();
+                    text-transform: uppercase;
+                    transition: 0.3s all;
+                }
+
+                .btn {
+                    transform: scale(0);
+                    transition: 0.3s all;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.5);
+                }
+
+                .overlay {
+                    background: rgba($color: $primCol, $alpha: .50);
+
+                    .icon {
+                        font-size: 24px;
+                    }
+
+                    .text {
+                        font-size: 24px;
+                    }
+
+                    .btn {
+                        transform: scale(1);
+
+                        &:hover {
+                            box-shadow: inset 0px 0px 0px 1px #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***** End our services *****/
+
+/***** about us *****/
+
+.about-us {
+    background-color: rgba($color: #fff, $alpha: .80);
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: url("https://images.unsplash.com/photo-1610642372677-bcddb69f3531?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        background-size: cover;
+    }
+
+    .body {
+        .text {
+            text-align: justify;
+        }
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/***** End about us *****/
+
+/***** Section projects *****/
+
+.our-projects {
+    @extend .our-services;
+
+    .body {
+        .service-card {
+            .overlay {
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+/***** End Section projects *****/

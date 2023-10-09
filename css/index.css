@@ -1,0 +1,70 @@
+/***** our services *****/
+.our-services .body .service-card, .our-projects .body .service-card {
+  position: relative;
+  overflow: hidden;
+  display: block; }
+  .our-services .body .service-card img, .our-projects .body .service-card img {
+    width: 100%;
+    transition: 0.3s all; }
+  .our-services .body .service-card .overlay, .our-projects .body .service-card .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    color: #fff;
+    transition: 0.3s all; }
+    .our-services .body .service-card .overlay .icon, .our-projects .body .service-card .overlay .icon {
+      font-size: 48px;
+      transition: 0.3s all; }
+    .our-services .body .service-card .overlay .text, .our-projects .body .service-card .overlay .text {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: 0.3s all; }
+    .our-services .body .service-card .overlay .btn, .our-projects .body .service-card .overlay .btn {
+      transform: scale(0);
+      transition: 0.3s all; }
+  .our-services .body .service-card:hover img, .our-projects .body .service-card:hover img {
+    transform: scale(1.5); }
+  .our-services .body .service-card:hover .overlay, .our-projects .body .service-card:hover .overlay {
+    background: rgba(209, 36, 66, 0.5); }
+    .our-services .body .service-card:hover .overlay .icon, .our-projects .body .service-card:hover .overlay .icon {
+      font-size: 24px; }
+    .our-services .body .service-card:hover .overlay .text, .our-projects .body .service-card:hover .overlay .text {
+      font-size: 24px; }
+    .our-services .body .service-card:hover .overlay .btn, .our-projects .body .service-card:hover .overlay .btn {
+      transform: scale(1); }
+      .our-services .body .service-card:hover .overlay .btn:hover, .our-projects .body .service-card:hover .overlay .btn:hover {
+        box-shadow: inset 0px 0px 0px 1px #fff; }
+
+/***** End our services *****/
+/***** about us *****/
+.about-us {
+  background-color: rgba(255, 255, 255, 0.8); }
+  .about-us::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1610642372677-bcddb69f3531?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    background-size: cover; }
+  .about-us .body .text {
+    text-align: justify; }
+  .about-us .body .image img {
+    width: 100%; }
+
+/***** End about us *****/
+/***** Section projects *****/
+.our-projects .body .service-card .overlay {
+  background: rgba(0, 0, 0, 0.5); }
+
+/***** End Section projects *****/
+
+/*# sourceMappingURL=index.css.map */
