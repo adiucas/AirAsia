@@ -4,8 +4,6 @@
     }
 
     body {
-        padding-bottom: 60px;
-
         &:after {
             content: "";
             display: block;
@@ -28,26 +26,6 @@
                 opacity: 1;
             }
         }
-    }
-
-    .sidebar-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1022;
-        height: 100%;
-        border-radius: 0;
-        transform: translateX(-100%);
-        transition: 0.3s all;
-
-        &.expanded {
-            transform: translateX(0);
-        }
-    }
-
-    .messenger-floating-icon {
-        margin: 15px 15px 70px;
-        opacity: 1;
     }
 
     .table {
@@ -81,52 +59,9 @@
             }
         }
     }
-
-    /* -------------------------------------------- */
-    /*                 cart progress                */
-    /* -------------------------------------------- */
-
-    .cart-steps {
-        .icon-name {
-            .label {
-                display: none;
-            }
-
-            &:not(:first-child) {
-                &::before {
-                    left: -15px;
-                }
-            }
-        }
-    }
-
-    /* -------------------------------------------- */
-    /*                  order steps                 */
-    /* -------------------------------------------- */
-    .order-steps {
-        .step {
-            .wrapper {
-                .label {
-                    font-size: 11px !important;
-                }
-            }
-        }
-    }
-
-    /* -------------------------------------------- */
-    /*                  home popup                  */
-    /* -------------------------------------------- */
-    #cboxClose {
-        right: 0;
-        top: -30px;
-    }
 }
 
 @media(min-width: 992px) {
-    .sidebar-container {
-        display: none;
-    }
-
     .table {
         .tbody {
             .tr {

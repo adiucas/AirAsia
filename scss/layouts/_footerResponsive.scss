@@ -1,25 +1,17 @@
 @media(max-width:992px) {
     .footer-wrapper {
-        height: 780px;
-        margin-bottom: -120px;
+        .copyright {
+            .copy-wrapper {
+                @include flex(col, center, center);
+                text-align: center;
 
-        .footer {
-            .quick-link {
-                .label {
-                    text-align: center;
+                .ucas {
+                    border-top: 1px solid rgba($color: $primCol, $alpha: .25);
+                    margin-top: 5px;
+                    padding-top: 5px;
+                    width: 100%;
+                    justify-content: center;
                 }
-
-                .links {
-                    text-align: center;
-                }
-            }
-
-            .followUs {
-                @include flex(row, center, center);
-            }
-
-            .payment-platforms {
-                @include flex(row, center, center);
             }
         }
     }
