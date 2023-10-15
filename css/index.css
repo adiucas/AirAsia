@@ -17,6 +17,7 @@
     height: 100%;
     top: 0;
     color: #fff;
+    padding: 0 30px;
     transition: 0.3s all; }
     .our-services .body .service-card .overlay .icon, .our-projects .body .service-card .overlay .icon {
       font-size: 48px;
@@ -25,7 +26,12 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
       text-transform: uppercase;
-      transition: 0.3s all; }
+      transition: 0.3s all;
+      text-align: center; }
+    .our-services .body .service-card .overlay .sub-text, .our-projects .body .service-card .overlay .sub-text {
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-top: -5px; }
     .our-services .body .service-card .overlay .btn, .our-projects .body .service-card .overlay .btn {
       transform: scale(0);
       transition: 0.3s all; }
@@ -66,5 +72,58 @@
   background: rgba(0, 0, 0, 0.5); }
 
 /***** End Section projects *****/
+/***** our clients *****/
+.our-clients .body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+.our-clients .tns-outer {
+  width: calc(100% - 120px); }
+.our-clients .tn-slider {
+  display: flex;
+  flex-direction: row; }
+  .our-clients .tn-slider .client-logo {
+    display: flex;
+    flex-direction: row;
+    width: 100%; }
+    .our-clients .tn-slider .client-logo .wrapper {
+      width: 100%;
+      border: 1px solid rgba(209, 36, 66, 0.25);
+      padding: 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; }
+      .our-clients .tn-slider .client-logo .wrapper img {
+        max-width: 100%;
+        max-height: 70px; }
+.our-clients .tns-controls {
+  position: relative;
+  display: flex !important; }
+  .our-clients .tns-controls button {
+    outline: none;
+    border: 1px solid #D12442;
+    background: #fff;
+    width: 30px;
+    height: 30px; }
+    .our-clients .tns-controls button:hover {
+      background: #D12442; }
+      .our-clients .tns-controls button:hover i {
+        color: #fae1e5; }
+    .our-clients .tns-controls button i {
+      color: #D12442; }
+  .our-clients .tns-controls button[data-controls="prev"] {
+    position: absolute;
+    top: 30px;
+    left: -60px;
+    z-index: 1; }
+  .our-clients .tns-controls button[data-controls="next"] {
+    position: absolute;
+    top: 30px;
+    right: -60px;
+    z-index: 1; }
+
+/***** End our clients *****/
 
 /*# sourceMappingURL=index.css.map */
