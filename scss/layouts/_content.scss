@@ -419,5 +419,27 @@
 	text-transform: capitalize;
 }
 
+/***** custom list *****/
+
+.ul {
+	.li {
+		@include flex(row);
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+
+		&:before {
+			content: "\f1d8";
+			font-family: $fw;
+			font-weight: bold;
+			color: $primCol;
+			margin-right: 10px;
+		}
+	}
+}
+
+/***** End custom list *****/
+
 
 @import "contentResponsive";

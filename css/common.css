@@ -469,6 +469,20 @@ p {
 .tooltip {
   text-transform: capitalize; }
 
+/***** custom list *****/
+.ul .li {
+  display: flex;
+  flex-direction: row; }
+  .ul .li:not(:last-child) {
+    margin-bottom: 8px; }
+  .ul .li:before {
+    content: "\f1d8";
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    color: #D12442;
+    margin-right: 10px; }
+
+/***** End custom list *****/
 @media (max-width: 992px) {
   .tooltip {
     display: none; }
