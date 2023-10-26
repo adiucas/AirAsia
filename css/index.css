@@ -1,4 +1,6 @@
 /***** our services *****/
+.our-services .body .col-lg-3, .our-projects .body .col-lg-3 {
+  flex-basis: 20%; }
 .our-services .body .service-card, .our-projects .body .service-card {
   position: relative;
   overflow: hidden;
@@ -27,7 +29,8 @@
       font-weight: 700;
       text-transform: uppercase;
       transition: 0.3s all;
-      text-align: center; }
+      text-align: center;
+      filter: drop-shadow(0px 1px 1px #000); }
     .our-services .body .service-card .overlay .sub-text, .our-projects .body .service-card .overlay .sub-text {
       text-transform: uppercase;
       font-size: 14px;
@@ -42,7 +45,7 @@
     .our-services .body .service-card:hover .overlay .icon, .our-projects .body .service-card:hover .overlay .icon {
       font-size: 24px; }
     .our-services .body .service-card:hover .overlay .text, .our-projects .body .service-card:hover .overlay .text {
-      font-size: 24px; }
+      font-size: 20px; }
     .our-services .body .service-card:hover .overlay .btn, .our-projects .body .service-card:hover .overlay .btn {
       transform: scale(1); }
       .our-services .body .service-card:hover .overlay .btn:hover, .our-projects .body .service-card:hover .overlay .btn:hover {

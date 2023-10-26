@@ -5,6 +5,10 @@
 
 .our-services {
     .body {
+        .col-lg-3 {
+            flex-basis: 20%;
+        }
+
         .service-card {
             position: relative;
             overflow: hidden;
@@ -36,6 +40,7 @@
                     text-transform: uppercase;
                     transition: 0.3s all;
                     text-align: center;
+                    filter: drop-shadow(0px 1px 1px #000);
                 }
 
                 .sub-text {
@@ -63,7 +68,7 @@
                     }
 
                     .text {
-                        font-size: 24px;
+                        font-size: 20px;
                     }
 
                     .btn {
