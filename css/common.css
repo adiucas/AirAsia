@@ -124,7 +124,8 @@ hr {
     padding: unset; }
     .navigation-menu .navbar .navbar-brand .logo {
       max-width: 100%;
-      max-height: 40px; }
+      max-height: 40px;
+      filter: brightness(0) invert(1); }
   .navigation-menu .navbar .navbar-nav > .nav-item {
     position: relative; }
     .navigation-menu .navbar .navbar-nav > .nav-item:hover {
@@ -540,7 +541,8 @@ hr {
     padding-bottom: 30px; }
     .footer-wrapper .footer .logo {
       max-width: 100%;
-      max-height: 70px; }
+      max-height: 100px;
+      filter: brightness(0) invert(1); }
     .footer-wrapper .footer .contact-wrapper {
       margin-top: 16px; }
       .footer-wrapper .footer .contact-wrapper .icon-text {
