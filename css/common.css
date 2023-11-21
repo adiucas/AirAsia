@@ -548,7 +548,7 @@ hr {
       .footer-wrapper .footer .contact-wrapper .icon-text {
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: center;
         margin: 16px 0; }
         .footer-wrapper .footer .contact-wrapper .icon-text .icon {
           display: flex;

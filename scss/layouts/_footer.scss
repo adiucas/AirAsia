@@ -15,7 +15,7 @@
 			margin-top: 16px;
 
 			.icon-text {
-				@include flex(row, null, baseline);
+				@include flex(row, null, center);
 				margin: 16px 0;
 
 				.icon {
